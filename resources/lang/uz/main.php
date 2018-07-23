@@ -2,43 +2,52 @@
 
 return [
 
-	/*Menu*/
-	'main' => 'Main',
-	'service' => 'services',
-	'port' => 'portfolios',
-	'workshop' => 'workshop',
-	'clients' => 'clients',
-	'blog' => 'blog',
-	'contacts' => 'Contacts',
-	/*End Menu*/
+	'main' => 'Bosh sahifa', 
+	   'service' => 'Xizmatlar', 
+	   'port' => 'Portfolio',
+	   'workshop' => 'Ishlab chiqarish bo\'limi',
+	   'clients' => 'Kлиенты', 
+	   'blog' => 'Blog', 
+	   'contacts' => 'Kontaktlar', 
+	   /*End Menu*/
 
-	/*Header and Footer*/
-	'timetable' => 'Working Hours',
-	'tel' => 'Our Contacts',
-	'callback' => 'Callback',
-	'address' => 'Address',
-	'write' => 'Write us',
-	'near' => 'Near Location',
-	'phone' => 'Telephone',
-	'email' => 'Email',
-	'social' => 'Social sites ',
-	'rights' => '2017 © Media Production <br> All rights are reserved ',
-	/*Header and Footer*/
+	   /*Header and Footer*/
+	   'timetable' => 'Ish tartibi', 
+	   'tel' => 'Bizning telefon', 
+	   'callback' => 'qayta aloqa', 
+	   'write' => 'Bizga yozing',
+	   'address' => 'Manzil', 
+	   'near' => 'Mo’ljal', 
+	   'phone' => 'Telefon',
+	   'email' => 'Pochta',
+	   'social' => 'Biz ijtimoiy tarmoqlarda',
+	   'rights' => '2017 © Media Production <br> Barcha huquqlar himoyalangan', 
+	   /*Header and Footer*/
 
-	/*Index Page*/
-	'benefit' => 'Our advantages',
-	'coop' => 'Are you ready for cooperation?',
-	'name' => 'Name',
-	'comp' => 'Company',
-	'message' => 'Message',
-	'sendus' => 'send',
-	/*End*/
+	   /*Index Page*/
+	   'benefit' => 'bizning afzalliklarimiz', 
+	   'coop' => 'Hamkorlikka tayyormisiz?', 
+	   'name' => 'Ism', 
+	   'comp' => 'Kompaniya', 
+	   'message' => 'Sizning xabar', 
+	   'sendus' => 'Bizga yuboring', 
+	   'more' => 'Ko’proq ishlar', 
+	   /*End*/
 
-	/*Blog Page*/
-	'search' => 'Search',
-	'show' => 'more',
-	'popular' => 'Popular posts',
-	/*End*/
+
+	   /*Blog Page*/
+	   'search' => 'Qidiruv', 
+	   'show' => 'ko\'proq ko\'rsatish', 
+	   'popular' => 'Ommaviy postlar', 
+	   'back' => 'Orqaga',
+	   'brief' => 'batafsil ma\'lumot', 
+	   /*End*/
+
+	   /*Client Page*/
+	   'work' => 'Ishlar', 
+	   'all' => 'Ko’proq ishlar', 
+	   /*End*/
+
 
 
 
