@@ -38,6 +38,8 @@ Route::group(
 		Route::get('search', 'IndexController@search');
 		Route::get('searchBlog', 'IndexController@searchBlog');
 		Route::get('workshop', 'IndexController@workshop');
+		Route::get('send','IndexController@send');
+		Route::post('send','IndexController@send');
 
 	});
 Route::group([

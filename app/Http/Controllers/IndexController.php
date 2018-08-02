@@ -49,7 +49,7 @@ class IndexController extends Controller
 	}
 	public function blog()
 	{
-		$blog = Blog::orderBy('id','DESC')->limit(1)->get();
+		$blog = Blog::orderBy('id','DESC')->limit(6)->get();
 		$pop = Blog::orderBy('view', 'desc')->get()->take(4);
 		return view('site.blog', [
 			'blog' => $blog,
@@ -133,7 +133,7 @@ class IndexController extends Controller
 	}
 	public function client()
 	{
-		$client = Client::orderBy('id','DESC')->limit(1)->get();
+		$client = Client::orderBy('id','DESC')->limit(6)->get();
 		return view('site.client', [
 			'client' => $client,
 		]);
@@ -208,7 +208,7 @@ class IndexController extends Controller
 	}
 	public function portfolio()
 	{
-		$port = Portfolio::orderBy('id','DESC')->limit(1)->with('imgOne')->get();
+		$port = Portfolio::orderBy('id','DESC')->limit(16)->with('imgOne')->get();
 		$cat = Category::orderBy('id','DESC')->get();
 
 		return view('site.portfolio', [
@@ -254,7 +254,7 @@ class IndexController extends Controller
 	public function category($slug)
 	{
 		$cat = Category::orderBy('id','DESC')->get();
-		$cats = Category::where('slug', $slug)->with('cat')->limit(1)->first();
+		$cats = Category::where('slug', $slug)->with('cat')->limit(16)->first();
 		// echo "<pre>";
 		// print_r($cats);
 		// echo "</pre>";
@@ -295,6 +295,27 @@ class IndexController extends Controller
 		return view('site.workshop', [
 			'work' => $work,
 		]);
+	}
+	public function send(Request $request)
+	{
+		$input = $request->all();
+		$name = $request->input('name');
+		$tel = $request->input('tel');
+		$comp = $request->input('comp');
+		$email = $request->input('email');
+		$mes = $request->input('mes');
+		$data = [
+			'name' => $request->name,
+			'comp' => $request->comp,
+			'email' => $request->email,
+			'tel' => $request->tel,
+			'mes' => $request->mes,
+		];
+		Mail::send('email.mail', $data, function ($mail) use($request){
+			$mail->from('test@ekrossovki.uz', $request->name);
+			$mail->to('parker_gu@mail.ru')->subject('Site message');
+		});
+		return back();
 	}
 
 }

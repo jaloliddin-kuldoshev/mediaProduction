@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>@yield('title')</title>
-  <meta charset="utf-8">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <link rel="stylesheet" type="text/css" href="{{asset('site/owl-carousel/owl.carousel.css')}}"/>
 
@@ -78,7 +81,7 @@
                 </div>
               </div>
               <div class="flex-item flex-item-btn">
-                <button class="btn btn-info" type="button">
+                <button class="btn btn-info down-button" type="button">
                   @lang('main.callback')
                 </button>
               </div>
@@ -171,7 +174,8 @@
       </div>
       <div class="mp_form_forms">
         <h4>@lang('main.callback')</h4>
-        <form action="" method="post" >
+        <form action="{{action('IndexController@send')}}" method="post">
+          {!! csrf_field() !!}
           <div class="mp_form_inputs">
             <div class="mp_form_input col-sm-6 col-md-3 col-lg-3 col-xs-">
               <input type="text" name="name" placeholder="@lang('main.name')">

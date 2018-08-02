@@ -27,7 +27,7 @@
 						</div>
 						<div class="mp_client_item_text">
 							<h4>{{$element->{'title_' . App::getLocale()} }}</h4>
-							{!!str_limit($element->{'text_' . App::getLocale()}, 100) !!}
+							{!! str_limit($element->{'text_' . App::getLocale()}, 70) !!}</p>
 							<a href="{{url('client/'.$element->slug)}}">@lang('main.brief')</a>
 						</div>
 					</div>

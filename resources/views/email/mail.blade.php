@@ -1,2 +1,5 @@
-<h1>{{ $data['name'] }}</h1><br>
-<div>{{ $data['email'] }}</div><br>
+<div>{{ $name }}</div><br>
+<div>{{ $email }}</div><br>
+<div>{{ $tel }}</div><br>
+<div>{{ $comp }}</div><br>
+<div>{{ $mes }}</div><br>

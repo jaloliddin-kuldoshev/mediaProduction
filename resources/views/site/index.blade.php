@@ -100,7 +100,7 @@
 			<div class="mp_port_projects col-sm-12 col-md-12 col-lg-12 col-xs-12">
 				<?php $k=1; foreach ($port as $key => $item): ?>
 				<?php if (in_array($key, [0, 9])): ?>
-					<a href="#">
+					<a href="{{url('portfolio/'.$item->slug)}}">
 						<div class="mp_port_one_project col-sm-12 col-md-6 col-lg-6 col-xs-12">
 							<div class="mp_port_one_project_block">
 								<img src="{{$item->imgOne->img}}" alt="">
@@ -117,8 +117,8 @@
 				<?php else: ?>
 					<?php if ($key == 1): ?>
 						<div class="mp_port_one_project col-sm-12 col-md-6 col-lg-6 col-xs-12">
-					<?php endif; ?>
-						<a href="#">
+						<?php endif; ?>
+						<a href="{{url('portfolio/'.$item->slug)}}">
 							<div class="mp_port_one_project_<?php echo $k -1 ?> col-sm-6 col-md-6 col-lg-6 col-xs-6">
 								<div class="mp_port_one_project_block">
 									<img src="{{$item->imgOne->img}}" alt="">
@@ -132,13 +132,13 @@
 								</div>
 							</div>
 						</a>
-					<?php if ($key == 4): ?>
+						<?php if ($key == 4): ?>
 						</div><div class="mp_port_one_project col-sm-12 col-md-6 col-lg-6 col-xs-12">
+						<?php endif; ?>
 					<?php endif; ?>
-					<?php endif; ?>
-					<?php if ($key == (count($port) - 2)): ?>
+					<?php if ($key == (count($port) - 1) || $key == 8): ?>
 					</div>
-					<?php endif; ?>
+				<?php endif; ?>
 				<?php if($k % 5 == 0){ $k=1; } $k++; endforeach ?>
 			</div>
 			<div class="mp_port_more">
@@ -258,7 +258,9 @@
 				<div class="mp_partners_item col-sm-3 col-md-3 col-lg-3 col-xs-3">
 					<div class="mp_partners_items">
 						<?php $k=1; foreach ($client as $element): ?>
-						<img src="{{$element->img}}" alt="">
+						<a href="{{ action('IndexController@oneClient', ['slug' => $element->slug]) }}">
+							<img src="{{$element->img}}" alt="">
+						</a>
 						<?php if($k % 2 == 0){ echo "</div></div><div class='mp_partners_item col-sm-3 col-md-3 col-lg-3 col-xs-3'><div class='mp_partners_items'>"; } 
 						$k++; endforeach; ?>
 					</div>

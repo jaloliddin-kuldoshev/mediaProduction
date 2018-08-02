@@ -307,12 +307,13 @@ $(document).ready(function(){
 	});
 	$('#search').keydown(function(e){
 		var keyCode = (e.keyCode ? e.keyCode : e.which);
-		var search = $(this).val();
+		var search = escape($(this).val());
 		if (keyCode == 13) {
 			$.ajax({
 				url: '/search/',
 				data: {search: search},
 				success: function(res){
+					console.log(search);
 					$('.mp_blog_page_content_items').html(res);
 					$('.mp_blog_page_more').remove();
 				}  
@@ -328,15 +329,23 @@ $(document).ready(function(){
 		}
 	});
 	$(document).on('click','#blog_search',function(){
-		var search = $('#search').val();
+		var search = escape($("#search").val()); 
 		$.ajax({
 			url: '/searchBlog/',
 			data: {search: search},
 			success: function(res){
+				console.log(search);
 				$('.mp_blog_page_content_items').html(res);
 				$('.mp_blog_page_more').remove();
 			}  
 		});
 		return;
 	});
+});
+$('.down-button').click(function () {
+	var scrollFromTop = $('.mp_form_forms').offset().top;
+
+	$('html,body').animate({ scrollTop: scrollFromTop }, 1000);
+
+	return false;
 });

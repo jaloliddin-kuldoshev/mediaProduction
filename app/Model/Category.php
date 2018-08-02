@@ -27,6 +27,6 @@ class Category extends Model
 	}
 	public function cat()
 	{
-		return $this->hasMany('App\Model\Portfolio', 'categories_id')->orderBy('id','DESC')->limit(1);
+		return $this->hasMany('App\Model\Portfolio', 'categories_id')->orderBy('id','DESC')->limit(16);
 	}
 }
