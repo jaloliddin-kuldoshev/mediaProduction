@@ -80,9 +80,11 @@ $(document).ready(function(){
 		navigation: false,
 		pagination: false,
 		margin:30,
+		autoPlay : 5000,
+		slideSpeed : 300,
 		stagePadding:30,
 		smartSpeed:450,
-		transitionStyle : "backSlide",    
+		transitionStyle : "fade",    
 
 	});
 	$(".next").click(function(){
@@ -348,4 +350,14 @@ $('.down-button').click(function () {
 	$('html,body').animate({ scrollTop: scrollFromTop }, 1000);
 
 	return false;
+});
+var var1 = $('.mp_header_navigation_menu').offset().top;
+$(window).scroll(function(){
+	if ($(window).scrollTop() >= var1) {
+		$('.mp_header').addClass('main_fixed-header');
+
+	}
+	else {
+		$('.mp_header').removeClass('main_fixed-header');
+	}
 });

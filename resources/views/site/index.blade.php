@@ -70,7 +70,7 @@
 				<div class="mp_service_slider_item mp_service_slider_border_<?php echo $k ?>">
 					<img src="{{$element->imgOne->img}}" alt="">
 				</div>
-				<h4>{{$element->{'title_' . App::getLocale()} }}</h4>
+				<a href="{{action('IndexController@oneService', ['slug' => $element->slug])}}"><h4>{{$element->{'title_' . App::getLocale()} }}</h4></a>
 			</div>
 			<?php if($k % 4 == 0){ $k=1; } $k++; endforeach; ?>
 		</div>

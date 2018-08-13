@@ -4,7 +4,7 @@
 <!-- ________________________________________________________Workshop Begins________________________________________________________ -->
 
 <section class="mp_contacts">
-	<div class="mp_blog_page_block">
+	<div class="mp_blog_page_block mp_work_page_block ">
 		<div class="container">
 			<div class="row">
 				<a href="{{action('IndexController@index')}}">@lang('main.main')  / </a>

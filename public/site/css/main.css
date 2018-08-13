@@ -33,7 +33,7 @@ body{
 	overflow: hidden;
 	margin: 32px -15px;
 }
-.mp_header_logo{
+.mp_header_logo{ 
 
 }
 .mp_header_logo img {
@@ -158,6 +158,29 @@ body{
 .top_address{
 	max-width: 157px;
 	line-height: 20px;
+}
+.main_fixed-header{
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	background-color: #ffffff;
+	top: 0;
+	left: 0;
+}
+.main_fixed-header .mp_header_navigation_worktime {
+	display: none;
+}
+.main_fixed-header .mp_header_container{
+	margin: 0px -15px;
+	padding: 15px 0;
+	display: flex;
+	align-items: center;
+}
+.main_fixed-header .mp_header_navigation_menu_item{
+	padding: 0;
+}
+.main_fixed-header .mp_header_logo img{
+	max-width: 100px;
 }
 
 /*_____________________________________Slider Block_________________________________*/
@@ -895,7 +918,7 @@ body{
 }
 .mp_form_items .flex-item_img img{
 	width: 70%;
-	filter: grayscale(1) brightness(-10) invert(122);
+	filter: invert(1);
 }
 .mp_form_items .time, .location, .stay, .email {
 	margin-right: 6px;
@@ -1747,7 +1770,7 @@ body{
 	margin: 0 -15px 40px;
 }
 .mp_serve_in_items{
-
+	margin-bottom: 20px;
 }
 .mp_serve_in_items_text{
 
@@ -1767,6 +1790,11 @@ body{
 	display: -o-flex;
 	display: flex;
 	justify-content: flex-start;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 .mp_serve_in_comp{
 	display: -webkit-flex;
@@ -1779,7 +1807,10 @@ body{
 	-ms-flex-direction: column;
 	-o-flex-direction: column;
 	flex-direction: column;
-	margin-right: 20px;
+	width: 25%;
+	min-width: 250px;
+	flex: 1 1 auto;
+	margin-bottom: 20px;
 }
 .mp_serve_in_comp a{
 	color: #78c0c2;
@@ -1793,4 +1824,42 @@ body{
 /*---------------------------------------------------------------------------------------------*/
 /*WORKSHOP PAGE*/
 /*---------------------------------------------------------------------------------------------*/
-
+.mp_work_page_block > h1{
+	font-family: 'Days';
+}
+.mp_work_page_block > h2{
+	font-family: 'Days';
+}
+.mp_work_page_block >  h3{
+	font-family: 'Days';
+}
+.mp_work_page_block > h4{
+	font-family: 'Days';
+}
+.mp_work_page_block > h5{
+	font-family: 'Days';
+}
+.mp_work_page_block > h6{
+	font-family: 'Days';
+}
+.mp_work_page_block > h1{
+	color: #616975 !important;
+}
+.mp_work_page_block > h2{
+	color: #616975 !important;
+}
+.mp_work_page_block >  h3{
+	color: #616975 !important;
+}
+.mp_work_page_block > h4{
+	color: #616975 !important;
+}
+.mp_work_page_block > h5{
+	color: #616975 !important;
+}
+.mp_work_page_block > h6{
+	color: #616975 !important;
+}
+.mp_work_page_block > p{
+	color: #616975 !important;
+}
